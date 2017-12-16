@@ -21,25 +21,31 @@ time, mark, audio, video {
 }
 
 /*font declarations*/
-p{
-  color: #585959;
-  font-family: 'Lato', sans-serif;
-	line-height: 20px;
+h2, h3, p, a{
+  color: #000000;
+  font-family: 'Cardo', serif;
 }
-h1, h2, h3{
+h1 {
   font-weight: 700;
-  color:#185d68;
-  font-family:'Roboto Slab', serif;
-	text-align: center;
-}
-h1{
-  font-size: 250%;
+  color:#ffffff;
+  font-family:'Scheherazade', serif;
+	font-size: 350%;
 }
 h2{
   font-size: 200%;
+	font-weight:700;
 }
 h3{
   font-size: 150%;
+}
+p, a{
+	font-size: 100%;
+}
+a{
+	text-decoration: none
+}
+a:hover, a:visited{
+	color:#4d4d4d;
 }
 
 /*body foundations*/
@@ -52,73 +58,184 @@ ul{
   padding: 0;
 }
 li{
-	display: inline;
+	display: block;
 }
 img{
   display: block;
   padding:0;
   height:auto;
 }
-box{
-  display:inline-block;
+.wrapper{
+	display:flex;
+	flex-flow: column nowrap;
+}
+.a, .c{
+	justify-content: flex-start;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+.a{
+	background-color: #919191;
+	background-image: url("/Users/sylwinntudor/Desktop/CGProjects/resume-project/assets/images/wire-dk-bottom.png");
+	height:30em;
+}
+.b, .d{
+	justify-content: center;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+.b{
+	height:45em;
+	background-color: #fafafa;
+	background-image: url("/Users/sylwinntudor/Desktop/CGProjects/resume-project/assets/images/wire-lt-top.png");
+}
+.c{
+	height:60em;
+	background-color: #fafafa;
+	background-image: url("/Users/sylwinntudor/Desktop/CGProjects/resume-project/assets/images/wire-lt-bottom.png");
+}
+.d{
+	height:45em;
+	background-color: #919191;
+	background-image: url("/Users/sylwinntudor/Desktop/CGProjects/resume-project/assets/images/wire-dk-top.png");
+}
+.container{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: center;
+}
+.box, .portBox, .textbox{
+  display:flex;
+	flex-flow:column nowrap;
 	height:15.625em;
 	width:15.625em;
-	padding:1.5%;
+	padding-right:4%;
 }
+.box{
+	align-items: flex-start;
+}
+.portBox{
+	align-items: center;
+}
+.textbox{
+	width:20em;
+	padding:0;
+
+}
+
 
 /* Nav & Header */
-nav{
-  width: 95%;
-  padding:2%;
-}
-nav h3{
-	text-align: right;
-	line-height: 1.5em;
-}
-nav li{
-	padding-left: 10%;
-}
 header{
-	padding-bottom: 15%;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+	width: 95%;
+  padding:2%;
+	background-color: #919191;
 }
-.logo{
-  height: auto;
-  width:80%;
-	margin: 0 auto;
-	padding-bottom:5%;
+.nav{
+	display:flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: space-around;
+	width:100%;
+	margin: 0 1%;
 }
 
-.headshot{
-  border-radius: 50%;
-  height: 14em;
-  width: auto;
-	margin: 0 auto;
+header h2{
+	line-height: 1.5em;
 }
 
 /*  main */
-.main{
-	padding: 5%;
-	width: 100%;
-	margin: 2% auto;
+
+#headshot, #logo{
+  border-radius: 0;
+  height: 18em;
+  width: auto;
 }
-
-.about, .skills{
-	height: 18.75em;
-	width:15.625em;
-	background-color: #fafafa;
-	display: inline-block;
-	padding: 2%;
-	vertical-align: middle;
-	text-align: center;
+#logo{
+	height:25%;
+	width:auto;
+	align-self: center;
+	margin-top:7%;
+	padding-bottom: 5%;
 }
-
-
-.skills{
-	margin-left: 5%;
+.square{
+	height: 150px;
+	width: 150px;
+	background-color: #4A4949;
+	margin:7%;
 }
-
-/* Portfolio */
-
-.portfolio{
-	background-color: #fafafa;
+#portfolio{
+	display:none;
+}
+footer{
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+@media(max-width: 750px){
+	.b{
+		height:65em;
+	}
+	.c{
+		height:80em;
+	}
+	.container{
+		flex-flow: column nowrap;
+    align-items: center;
+		height:40em;
+	}
+	.box, .portBox, .textbox{
+		align-items: center;
+		width:50%;
+		margin: 10% 0;
+	}
+	#logo{
+		height:15%;
+	}
+	h1{
+		font-size: 200%;
+	}
+	h2{
+		font-size: 150%;
+	}
+	h3{
+		font-size:125%;
+	}
+}
+@media(max-width:600px){
+	.a, footer{
+		height:100vh;
+	}
+	.c{
+		height:100em;
+	}
+}
+@media(max-width:425px){
+	.c{
+		height:110em;
+	}
+	#headshot{
+		margin-top:15%;
+	}
+}
+@media(max-width:	325px){
+	#headshot {
+    height: 12em;
+    align-self: flex-end;
+    margin-top: 60%;
+	}
+	.c{
+		height:120em;
+	}
+	h1{
+		font-size: 150%;
+	}
+	h2{
+		font-size: 125%;
+	}
+	h3{
+		font-size:100%;
+	}
 }
